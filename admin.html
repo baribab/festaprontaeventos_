@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Painel Administrativo</title>
+
+    <link rel="stylesheet" href="admin.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- TOPO -->
+
+    <header class="topbar">
+      <div>
+        <h1>Painel Administrativo</h1>
+
+        <p>Gerenciamento de solicitações da Festa Pronta</p>
+      </div>
+
+      <a href="index.html" class="btn-site"> Voltar ao Site </a>
+    </header>
+
+    <!-- CONTEUDO -->
+
+    <main class="container">
+      <!-- CARDS -->
+
+      <section class="cards">
+        <div class="info-card">
+          <h3 id="totalPedidos">0</h3>
+
+          <p>Solicitações</p>
+        </div>
+
+        <div class="info-card">
+          <h3 id="totalCasamentos">0</h3>
+
+          <p>Casamentos</p>
+        </div>
+
+        <div class="info-card">
+          <h3 id="totalFormaturas">0</h3>
+
+          <p>Formaturas</p>
+        </div>
+
+        <div class="info-card online">
+          <h3>Online</h3>
+
+          <p>Sistema Operacional</p>
+        </div>
+      </section>
+
+      <!-- TABELA -->
+
+      <section class="tabela-container">
+        <div class="tabela-topo">
+          <h2>Solicitações Recebidas</h2>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Evento</th>
+              <th>Data</th>
+              <th>Local</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaPedidos"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
