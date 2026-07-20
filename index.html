@@ -201,36 +201,41 @@
 
     <!-- FORMULARIO -->
 
+    <!-- FORMULÁRIO -->
+
     <section class="formulario" id="orcamento">
       <div class="titulo-section">
-        <span> Solicitação </span>
+        <span>Solicitação</span>
 
-        <h2>Solicite Seu Orçamento</h2>
+        <h2>Solicite seu orçamento</h2>
 
-        <p>Informe os detalhes do seu evento.</p>
+        <p>
+          Preencha todas as informações para solicitar um orçamento de decoração. Os campos
+          obrigatórios devem ser preenchidos corretamente.
+        </p>
       </div>
 
       <form class="form" id="formEvento">
         <div class="input-group">
-          <label>Nome Completo</label>
-          <input type="text" id="nome" placeholder="Digite seu nome" />
+          <label for="nome">Nome Completo *</label>
+          <input type="text" id="nome" placeholder="Digite seu nome completo" />
         </div>
 
         <div class="input-group">
-          <label>Email</label>
-          <input type="email" id="email" placeholder="Digite seu email" />
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" placeholder="Digite seu e-mail" />
         </div>
 
         <div class="input-group">
-          <label>Telefone</label>
+          <label for="telefone">Telefone *</label>
           <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
         </div>
 
         <div class="input-group">
-          <label>Tipo de Evento</label>
+          <label for="evento">Tipo de Evento *</label>
 
           <select id="evento">
-            <option>Selecione</option>
+            <option value="">Selecione</option>
             <option>Casamento</option>
             <option>Formatura</option>
             <option>Aniversário</option>
@@ -239,21 +244,53 @@
         </div>
 
         <div class="input-group">
-          <label>Data do Evento</label>
+          <label for="data">Data do Evento *</label>
           <input type="date" id="data" />
         </div>
 
         <div class="input-group">
-          <label>Local Previsto</label>
-          <input type="text" id="local" placeholder="Cidade ou salão" />
+          <label for="local">Local Previsto *</label>
+          <input type="text" id="local" placeholder="Cidade, salão ou endereço" />
+        </div>
+
+        <!-- Aula 6 -->
+
+        <div class="input-group">
+          <label for="tipoLocal">Tipo do Local *</label>
+
+          <select id="tipoLocal">
+            <option value="">Selecione</option>
+            <option>Salão de Festas</option>
+            <option>Chácara</option>
+            <option>Igreja</option>
+            <option>Residência</option>
+            <option>Clube</option>
+            <option>Outro</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="prioridade">Prioridade do Atendimento *</label>
+
+          <select id="prioridade">
+            <option value="">Selecione</option>
+            <option>Baixa</option>
+            <option>Média</option>
+            <option>Alta</option>
+          </select>
         </div>
 
         <div class="input-group full">
-          <label>Detalhes do Evento</label>
-          <textarea rows="5" placeholder="Descreva seu evento"></textarea>
+          <label for="descricao">Detalhes do Evento</label>
+
+          <textarea
+            id="descricao"
+            rows="5"
+            placeholder="Descreva seu evento, quantidade de convidados, estilo desejado e outras informações importantes."
+          ></textarea>
         </div>
 
-        <button class="btn">Enviar Solicitação</button>
+        <button type="submit" class="btn">Enviar Solicitação</button>
       </form>
     </section>
 

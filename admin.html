@@ -34,29 +34,34 @@
 
     <main class="container">
       <!-- CARDS -->
-
       <section class="cards">
         <div class="info-card">
           <h3 id="totalPedidos">0</h3>
-
           <p>Solicitações</p>
         </div>
 
         <div class="info-card">
           <h3 id="totalCasamentos">0</h3>
-
           <p>Casamentos</p>
         </div>
 
         <div class="info-card">
           <h3 id="totalFormaturas">0</h3>
-
           <p>Formaturas</p>
+        </div>
+
+        <div class="info-card">
+          <h3 id="totalPendentes">0</h3>
+          <p>Pendentes</p>
+        </div>
+
+        <div class="info-card">
+          <h3 id="totalAlta">0</h3>
+          <p>Prioridade Alta</p>
         </div>
 
         <div class="info-card online">
           <h3>Online</h3>
-
           <p>Sistema Operacional</p>
         </div>
       </section>
@@ -66,6 +71,25 @@
       <section class="tabela-container">
         <div class="tabela-topo">
           <h2>Solicitações Recebidas</h2>
+          <div class="filtros">
+            <input type="text" id="pesquisa" placeholder="Pesquisar por nome..." />
+
+            <select id="filtroStatus">
+              <option value="">Todos os Status</option>
+              <option>Pendente</option>
+              <option>Em andamento</option>
+              <option>Concluído</option>
+            </select>
+
+            <select id="filtroPrioridade">
+              <option value="">Todas as Prioridades</option>
+              <option>Baixa</option>
+              <option>Média</option>
+              <option>Alta</option>
+            </select>
+
+            <button id="btnBackup" class="btn-site">Exportar Backup</button>
+          </div>
         </div>
 
         <table>
@@ -75,6 +99,8 @@
               <th>Evento</th>
               <th>Data</th>
               <th>Local</th>
+              <th>Tipo do Local</th>
+              <th>Prioridade</th>
               <th>Status</th>
               <th>Ações</th>
             </tr>
